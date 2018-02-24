@@ -1,0 +1,54 @@
+{
+    "Problem": [
+        {
+            "Lower bound": 4.3, 
+            "Name": "unknown", 
+            "Number of constraints": 4, 
+            "Number of nonzeros": 10, 
+            "Number of objectives": 1, 
+            "Number of variables": 4, 
+            "Sense": "maximize", 
+            "Upper bound": 4.3
+        }
+    ], 
+    "Solution": [
+        {
+            "number of solutions": 1, 
+            "number of solutions displayed": 1
+        }, 
+        {
+            "Constraint": "No values", 
+            "Gap": 0.0, 
+            "Message": null, 
+            "Objective": {
+                "obj": {
+                    "Value": 4.3
+                }
+            }, 
+            "Problem": {}, 
+            "Status": "optimal", 
+            "Variable": {
+                "WeeklyProd[Doors]": {
+                    "Value": 6.0
+                }, 
+                "WeeklyProd[Windows]": {
+                    "Value": 5.0
+                }
+            }
+        }
+    ], 
+    "Solver": [
+        {
+            "Error rc": 0, 
+            "Statistics": {
+                "Branch and bound": {
+                    "Number of bounded subproblems": "3", 
+                    "Number of created subproblems": "3"
+                }
+            }, 
+            "Status": "ok", 
+            "Termination condition": "optimal", 
+            "Time": 0.00602412223815918
+        }
+    ]
+}

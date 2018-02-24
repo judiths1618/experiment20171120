@@ -1,0 +1,23 @@
+# abstract2.dat AMPL data format
+
+set I := t1 t2 t3 ;
+set J := Graham John Carol ;
+
+param a :=
+t1  Graham 3
+t1 John 4.4
+t1 Carol 4.9
+t2 Graham 1
+t2 John 2.4
+t2 Carol 1.1
+t3 Graham 1.3
+t3 John 2.7
+t3 Carol 5.3
+;
+param c := [*]
+ Graham 2.2
+ John 3.1416
+ Carol 3
+;
+
+param b := t1 12 t2 13  t3 23;

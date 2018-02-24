@@ -1,0 +1,23 @@
+# gne.dat AMPL format
+set tasks := t1 t2 t3;
+set providers := Hw TengX Amaz;
+
+param v :=
+t1 Hw 2.3
+t1 TengX 5.3
+t1 Amaz 6.5
+t2 Hw 3.8
+t2 TengX 4.7
+t2 Amaz 6.2
+t3 Hw 3.4
+t3 TengX 5.2
+t3 Amaz 4.6
+;
+
+param nums := [*]
+ Hw 23
+ TengX 34
+ Amaz 53
+;
+
+param types := t1 4 t2 5 t3 11 ;
