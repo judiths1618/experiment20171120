@@ -161,6 +161,15 @@ def get_ass1(ass1_file):
     return res1
 
 
+def get_ass2(ass2_file):
+    res2 = []
+    fa = open (ass2_file, 'r')
+    for line in fa.readlines ():
+        res = re.match ('^ass2.*', line)
+        if not res == None:
+            res2.append(res.group ().replace ('ass2', ''))
+    return res2
+
 def get_ass3(ass3_file):
     res3 = []
     fa = open (ass3_file, 'r')
@@ -169,6 +178,50 @@ def get_ass3(ass3_file):
         if not res == None:
             res3.append(res.group ().replace ('ass3', ''))
     return res3
+
+
+def get_etc_vm(pre_ass, V):
+    csp1 = []
+    csp2 = []
+    csp3 = []
+    for z in V[0:3]:
+        for x in pre_ass:
+            y = eval (x)
+            for i, j in y.items ():
+                for k, l in j.items ():
+                    if i == z:
+                        vm_etc = (i, l)
+                        # print(vm_etc)
+                        csp1.append (vm_etc)
+    for z in V[3:6]:
+        for x in pre_ass:
+            y = eval (x)
+            for i, j in y.items ():
+                for k, l in j.items ():
+                    if i == z:
+                        vm_etc = (i, l)
+                        # print (vm_etc)
+                        csp2.append (vm_etc)
+    for z in V[6:len(V)]:
+        for x in pre_ass:
+            y = eval (x)
+            for i, j in y.items ():
+                for k, l in j.items ():
+                    if i == z:
+                        vm_etc = (i, l)
+                        # print (vm_etc)
+                        csp3.append (vm_etc)
+    return csp1, csp2, csp3
+
+
+def fairness(csp):
+    etc = []
+    pfetc = []
+    for x in csp:
+        etc.append(x[1])
+        pfetc.append(x[1]*x[1])
+    fairness = round(sum(etc)*sum(etc)/(len(etc)*sum(pfetc)),6)
+    return fairness
 
 
 def profitList(pre_ass, vm_price):
